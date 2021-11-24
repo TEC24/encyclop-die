@@ -1,16 +1,27 @@
-# flutter_application_1
+import 'dart:ui';
 
-A new Flutter project.
+import 'package:flutter/material.dart';
 
-## Getting Started
+void main() => runApp(MyApp());
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Icon(Icons.home),
+          backgroundColor: Colors.orangeAccent,
+        ),
+        body: Container(
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.all(30.0),
+          color: Colors.black,
+          child: Image(
+            image: AssetImage('assets/pasted image 0.png'),
+          ),
+        ),
+      ),
+    );
+  }
+}
